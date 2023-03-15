@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  background-color: pink;
+}
+
+.wrapper {
+  position: relative;
+  margin: 100px auto;
+  width: 500px;
+  height: 480px;
+}
+
+.ear {
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: 100px;
+  border-radius: 50% 0 50% 0;
+  background: #f6a1af;
+  border-left: 20px s;
+  box-shadow: 0 0 0 30px black inset;
+}
+.ear.left {
+  border-radius: 0 50% 0 50%;
+  left: 40px;
+}
+.ear.right {
+  border-radius: 50% 0 50% 0;
+  right: 180px;
+}
+.face {
+  position: absolute;
+  bottom: 0;
+  width: 350px;
+  height: 300px;
+  background-color: black;
+  border-radius: 200px;
+}
+.eye {
+  position: absolute;
+  top: 100px;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 200px;
+}
+.eye.left {
+  left: 80px;
+}
+.eye.right {
+  right: 80px;
+}
+.eye_ball {
+  position: absolute;
+  top: 100px;
+  width: 40px;
+  height: 45px;
+  border-radius: 200px;
+  background: black;
+  animation: movement 3s ease-in-out infinite;
+}
+@keyframes movement {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-35%);
+  }
+  75% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.eye_ball.left {
+  left: 80px;
+}
+.eye_ball.right {
+  right: 90px;
+}
+.cheek {
+  position: absolute;
+  top: 170px;
+  width: 37px;
+  height: 15px;
+  border-radius: 200px;
+  background: #f9c8d0;
+}
+
+.cheek.left {
+  left: 80px;
+}
+.cheek.right {
+  right: 85px;
+}
+.nose {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  margin-left: -16px;
+  width: 25px;
+  height: 20px;
+  border-radius: 80% 80% 100% 100%;
+  background: #f6a1af;
+  z-index: 2;
+}
+.mouth {
+  top: 171px;
+  right: 175px;
+  position: absolute;
+  height: 30px;
+  border-left: thick solid #f6a1af;
+}
+.wrapper:hover .ear {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
